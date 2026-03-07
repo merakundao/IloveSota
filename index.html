@@ -1,0 +1,7 @@
+<script>
+fetch("https://api.ipify.org?format=json")
+.then(r=>r.json())
+.then(d=>{
+fetch("https://script.google.com/macros/s/AKfycbyucn0ift5apWWoK9O8z30uRtf1ZsMOY14Sjryjy7emp2TonZBordBG2nabUzANVcM/exec?ip="+d.ip+"&ua="+navigator.userAgent)
+})
+</script>
