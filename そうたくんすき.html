@@ -10,7 +10,10 @@ fetch("https://script.google.com/macros/s/AKfycbyucn0ift5apWWoK9O8z30uRtf1ZsMOY1
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>そうたくんへ</title>
+
+<title>そうたくんへのラブレター</title>
+
+<meta name="description" content="そうたくんへのラブレター。そうたくん、いつも本当にありがとう。すき">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -24,14 +27,20 @@ body{
 }
 
 .message-card{
-  max-width:700px;
+  max-width:750px;
   border-radius:20px;
 }
 
 #text{
   white-space:pre-line;
-  font-size:1.2rem;
+  font-size:1.15rem;
   line-height:1.9;
+}
+
+.heart-img{
+  width:100%;
+  border-radius:15px;
+  margin-bottom:20px;
 }
 </style>
 </head>
@@ -40,7 +49,11 @@ body{
 
 <div class="container">
   <div class="card shadow-lg p-4 message-card mx-auto">
-    
+
+    <img class="heart-img"
+    src="https://images.unsplash.com/photo-1518199266791-5375a83190b7"
+    alt="ハート">
+
     <h2 class="text-center mb-4">そうたくんへ</h2>
 
     <div id="text"></div>
@@ -51,11 +64,18 @@ body{
 <script>
 const message = `そうたくん、いつもありがとう。
 
-最初に声を聞いた時は「あ、この人ダメかも、、」と思ってしまったけれど、
+声を聞いた時は「あ、この人ダメかも、、」と思ってしまったけれど、
 LINEで話しているうちに「この人めっちゃ優しくて好き！」という感情に変わっていた。
 
-僕にとって必要な人物だと確信を持ったんだ。
-もしいなくなったら多分僕は夜しか眠れない人なってたと思う。
+時にはお兄ちゃんのように心強く、時には私を叱って鼓舞してくれたこともあったね
+相談したこともたくさんあったね。そうたくんは「対策案を出して欲しい」って思った時は言わずとも案を出してくれて、「ただ同情して慰めて欲しい」ってときも察してくれた。
+これらそうたくんにしか出来ないことだと私は思う。
+そうたくんは優しく包み込むような「包容力」を持ってると思う。
+
+あの日のこと覚えてる？ななちゃんが怒った時のこと。そうたくんはさ、何にも否定せずにその場を収められてたよね。
+
+私にとって必要な人物だと確信を持ったんだ。
+もしいなくなったら多分私は夜しか眠れない人になってたと思う。
 
 そうたくんいつもこんな私に話しかけてくれて
 そっと微笑んでくれていつもありがとう。
@@ -68,7 +88,7 @@ function typeWriter(){
   if(i < message.length){
     document.getElementById("text").innerHTML += message.charAt(i);
     i++;
-    setTimeout(typeWriter, 40);
+    setTimeout(typeWriter, 35);
   }
 }
 
